@@ -576,9 +576,6 @@ Kafka怎么保证数据可靠性？讲了生产者端发送消息到broker持久
 
 # 项目相关：
 
-## instaclip:
 
-1. 根据Board id获取post视频列表 （按时间来排序 getBoardPosts 方法）
-2. save 对应post的时候，要在缓存中保存这个post pubsherId的对应关系、boardId的对应关系。
 
 
