@@ -306,33 +306,19 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ## 线程相关
 
 1. [线程池原理](https://www.jianshu.com/p/87bff5cc8d8c) [线程池状态](https://blog.csdn.net/kuangsonghan/article/details/80674777)  [线程池相关面试题](https://www.nowcoder.com/discuss/152050)
-
 2. [Netty 线程模型](https://www.infoq.cn/article/netty-threading-model) [Netty 高效并发编程](https://blog.csdn.net/baiye_xing/article/details/73351330)
-
 3. 线程三种创建方式、[线程的5个状态和转化](https://blog.csdn.net/xingjing1226/article/details/81977129)、 sleep和yield不同、什么时候放弃同步监视器
-
 4. [synchronized和lock的区别](https://www.cnblogs.com/billmiao/p/9872163.html) [synchronized 原理](https://www.jianshu.com/p/19f861ab749e) [ReentrantLock原理](https://www.jianshu.com/p/4358b1466ec9)（再看）
-
 5. [volatile关键字](https://www.cnblogs.com/dolphin0520/p/3920373.html)：需要保证操作是原子性操作，才能保证使用volatile关键字的程序在并发时能够正确执行，也就是说基本数据类型的数值或者false赋值、volatile和Atomic* 一起使用
-
 6. [CAS](https://www.jianshu.com/p/fb6e91b013cc) [cas的ABA问题的解决方法](https://www.jianshu.com/p/8b227a8adbc1) 和 [使用方法](https://blog.csdn.net/xybz1993/article/details/79992120)
-
 7. [valatile cas -> atomic 无锁操作](https://www.cnblogs.com/dengzz/p/5688021.html)
-
 8. [AQS 原理](https://www.jianshu.com/p/d8eeb31bee5c) [公平锁 非公平锁 图解](https://blog.csdn.net/yanyan19880509/article/details/52435135)  [lock tryLock lockInterruptibly](https://www.zhihu.com/question/36771163)
-
 9. [重入锁](https://blog.csdn.net/u010173095/article/details/78621170)、[独占锁与共享锁](https://www.cnblogs.com/liuling/p/2013-8-21-03.html)（写锁、读锁）、公平锁与非公平锁 （默认false非公平锁，true为公平锁）、[悲观锁与乐观锁](http://blog.itpub.net/69903322/viewspace-2286168/) （synchronized lock 与 cas）
-
 10. [LongAdder](https://blog.csdn.net/zqz_zqz/article/details/70665941)
-
 11. [同步调用，异步回调和 Future 模式](https://blog.csdn.net/qq_35688140/article/details/83115723)
-
 12. [CountDownLatch、CyclicBarrier和Semaphore](https://www.cnblogs.com/dolphin0520/p/3920397.html)
-
 13. [grpc中的同步和异步](https://blog.csdn.net/huweijian5/article/details/83822470#grpc_2)
-
 14. [java有哪些锁？](https://www.cnblogs.com/chinaifae/articles/10338547.html)
-
 15. [AtomicReference](https://blog.csdn.net/chuanwen0451/article/details/100816412)
 
 ## 常见考题
@@ -573,6 +559,9 @@ Redis有哪些数据结构？持久化方案和区别？
 Redis哨兵、集群的设计原理和区别？
 Redis缓存和数据库会存在一致性问题吗？怎么解决
 Kafka怎么保证数据可靠性？讲了生产者端发送消息到broker持久化，分区和副本机制，消费者消费消息的at-least-once和at-most-once？怎么实现Exactly-Once？
+
+## 百度
+面试时候，让手写一个多生产者多消费者，一个无锁队列
 
 # 项目相关：
 
