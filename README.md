@@ -288,6 +288,20 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 2. TCP的滑动窗口原理
 
 # java 相关
+## Java 坑
+[1.对象比较方法 Objects.equals 
+2.三元表达式拆包
+3.泛型对象赋值
+4.泛型属性拷贝
+5.Set对象排重
+6.公有方法代理 aop
+7.公有字段代理](https://mp.weixin.qq.com/s/edf9qy2Rthl9bzdxSxtAeQ)
+8.各种包装和基本类型转化
+
+
+
+
+
 
 ## 集合相关
 
