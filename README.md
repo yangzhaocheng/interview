@@ -415,7 +415,19 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 7. [Mysql中myisam和innodb的区别](http://blog.itpub.net/21374452/viewspace-2136284/)
 8. [**普通索引**，**回表**，**索引覆盖**](https://www.jianshu.com/p/8991cbca3854)
 
- 
+1、从0到1掌握mysql的索引系统
+
+2、索引系统中数据结构的抉择
+
+3、索引的分类及应用场景
+
+4、不同存储引擎索引的区别及数据存储方式
+
+5、索引中隐藏的知识点：索引回表、覆盖索引、索引下推
+
+6、如何创建性能最优的索引
+
+7、索引的优化 
 
 
 
