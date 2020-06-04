@@ -300,7 +300,8 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 
 
-
+## 基本类型相关
+[1.String#intern](https://tech.meituan.com/2014/03/06/in-depth-understanding-string-intern.html)
 
 
 ## 集合相关
