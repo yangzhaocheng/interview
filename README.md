@@ -474,6 +474,10 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 5. [TimingWheel 时间轮详解](https://blog.csdn.net/u013332124/article/details/82119144)
 6. [kafka语义](https://blog.csdn.net/laojiaqi/article/details/79034798)
 
+
+# 系统设计:
+1.[近8小时点击量最大的文章前100名]( https://juejin.im/post/5abcd6a0f265da23961279c8)
+
 # 公司面试
 
 ## [头条(校招)：](https://mp.weixin.qq.com/s/REBPmDPLqxmzTUXU6Cmg7A)
