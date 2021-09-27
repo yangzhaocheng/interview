@@ -287,7 +287,10 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 1. [TCP 的三次握手和四次捂手](https://blog.csdn.net/bit_clearoff/article/details/60884905) [流程](https://blog.csdn.net/whuslei/article/details/6667471)
 2. TCP的滑动窗口原理
 
-# java 相关
+# java 相关 
+
+[Java 全栈知识体系](https://www.pdai.tech/)
+
 ## Java 坑
 [1.对象比较方法 Objects.equals 
 2.三元表达式拆包
@@ -303,6 +306,8 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ## 基本类型相关
 [1.String#intern](https://tech.meituan.com/2014/03/06/in-depth-understanding-string-intern.html)
 解释的最清楚：https://blog.csdn.net/SEU_Calvin/article/details/52291082
+
+
 
 
 ## 集合相关
@@ -358,23 +363,29 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ## JVM
 
-1. [gc](https://zhuanlan.zhihu.com/p/25539690)算法： **根搜索算法**、**标记 - 清除算法**、**复制算法**、**标记 - 整理算法**
+1. [JVM精讲](https://www.cnblogs.com/jmcui/category/1503029.html)
 
-2. [**垃圾回收器**](https://zhuanlan.zhihu.com/p/25539690)：新生代：**Serial**、**ParNew**、**ParallelScavenge**（优先吞吐量）老生代:**SerialOld**、**ParallelOld**、**CMS （-XX:+UseConcMarkSweepGC 优**响应时间**）**
+2. [gc](https://zhuanlan.zhihu.com/p/25539690)算法： **根搜索算法**、**标记 - 清除算法**、**复制算法**、**标记 - 整理算法**
+
+3. [**垃圾回收器**](https://zhuanlan.zhihu.com/p/25539690)：新生代：**Serial**、**ParNew**、**ParallelScavenge**（优先吞吐量）老生代:**SerialOld**、**ParallelOld**、**CMS （-XX:+UseConcMarkSweepGC 优**响应时间**）**
 
    其中新生代使用复制算法、老生代使用标记-整理算法，除了CMS（ 标记-清理）
 
    只有Serial、ParNew 和CMS可以一起使用。
 
-3. [jvm的内存分布](https://www.cnblogs.com/wtzbk/p/7985156.html?clicktime=1573004363&enterid=1573004363)（看书）
+   线上实用的基本上市ParNew + CMS
 
-4. [什么时候进行gc](https://www.zhihu.com/question/41922036/answer/154212925)
+4. [jvm的内存分布](https://www.cnblogs.com/wtzbk/p/7985156.html?clicktime=1573004363&enterid=1573004363)（看书）
 
-5. [G1算法](https://www.cnblogs.com/ityouknow/p/5614961.html)
+5. [什么时候进行gc](https://www.zhihu.com/question/41922036/answer/154212925)
 
-6. [JVM内存结构、Java内存模型 、Java对象模型](https://mp.weixin.qq.com/s/i_i3aT48NCPukE_6w9Srng)
+6. [G1算法](https://www.cnblogs.com/ityouknow/p/5614961.html)
 
-7. [什么时候进行Minor GC 和 FULL GC](https://blog.csdn.net/varyall/article/details/82527070)
+7. [JVM内存结构、Java内存模型 、Java对象模型](https://mp.weixin.qq.com/s/i_i3aT48NCPukE_6w9Srng)
+
+8. [什么时候进行Minor GC 和 FULL GC](https://blog.csdn.net/varyall/article/details/82527070)
+
+9. [三色标记法与读写屏障](https://www.cnblogs.com/jmcui/p/14165601.html#_label4)
 
    ​    
 
@@ -625,67 +636,67 @@ Kafka怎么保证数据可靠性？讲了生产者端发送消息到broker持久
    进阶2：写变多，读写比变为7:3
 8. 算法题：一个长字符串，一个不重复的字符数组。找到一个子串，内容与数组相同（顺序可不同）
    要求：时间复杂度O(N)，且不用任何额外数据结构，数组也不能开
-【杭州商业化广告】
-blockingqueue 
-1、大小固定 
-2、多线程 
-3、支持泛型 
-put、get方法
-算法题：给定一个数组代表股票每天的价格，请问只能买卖一次的情况下，最大化利润是多少？
-输入: {100, 80, 120, 130, 70, 60, 100, 125} 
-输出:65（60 买进，125 卖出）
-【上海广告创意中心】
-1.介绍项目。
-2.Redis中value过大会造成什么问题？为什么？
-3.LRU  怎样实现，怎样优化，局部性原理
-4.MySQL联合索引，怎样不回表？
-5.算法：岛屿问题 （图的遍历）
-【杭州商业化广告】
-1.秒杀系统设计
-2.问了下AOP原理和应用
-算法题：田忌赛马
-【北京商业化广告】
-1.保护系统，限流，令牌桶。
-2.数据库延迟1分钟原因。
-3.cms垃圾回收器可回收浮动垃圾。
-4.新生代存活的对象如何处理。
-5.hashmap原理。
-算法题： 搬家 远亲不如近邻
-输入居民个数，搬家方案，居民位置，方案
-输入：3, 2 [2, 4, 7],[5, 8]
-输出：[1, 1]
-搬到5的位置上，距离最近的居民是4，距离为1
-搬到8的位置上，距离最近的居民是7，距离为1
-【杭州IES互娱】
-1.hashmap的原理，
-2.resize的系列，0.75这个值怎么来的。
-3.redis的数据结构，zset的实现，为什么用的跳表不是红黑树。
-4.http请求的整个链路
-算法题：链表重排序，基数位元素升序，偶数位降序。
-【北京IES互娱】
-1.如何实现并发调用多个RPC接口？
-2.IO多路复用？select/poll/epoll的区别？
-3.netty的NIO实现机制
-4.redis
-5.jvm垃圾回收算法
-算法题：二叉树按层遍历，偶数层倒序
-【杭州商业化广告】
-1.301，302区别
-2.Mysql checkpoint作用
-3.Select和epoll区别
-4.Redis rehash过程
-5.Redis集群添加key的定位算法
-6.Cms有几次stop the world
-7.Rocket架构是什么
-8.一道sql题，出现过2次及以上相同名字的人的名字
-算法题：一道算法题，最大子数组，子数组可以组成顺子，求最大子数组长度，整数数组，比如31254637
-子数组为125463，可以组成123456顺子
-【上海教育中台】
-1.分布式锁
-2.多线程
-3.消息队列保证消息有序
-算法题：1-26对应a-z字母，随机写一个数字，输出所有的组合可能情况
-算法题：两个链表融合成一个，并排序
+   【杭州商业化广告】
+   blockingqueue 
+   1、大小固定 
+   2、多线程 
+   3、支持泛型 
+   put、get方法
+   算法题：给定一个数组代表股票每天的价格，请问只能买卖一次的情况下，最大化利润是多少？
+   输入: {100, 80, 120, 130, 70, 60, 100, 125} 
+   输出:65（60 买进，125 卖出）
+   【上海广告创意中心】
+   1.介绍项目。
+   2.Redis中value过大会造成什么问题？为什么？
+   3.LRU  怎样实现，怎样优化，局部性原理
+   4.MySQL联合索引，怎样不回表？
+   5.算法：岛屿问题 （图的遍历）
+   【杭州商业化广告】
+   1.秒杀系统设计
+   2.问了下AOP原理和应用
+   算法题：田忌赛马
+   【北京商业化广告】
+   1.保护系统，限流，令牌桶。
+   2.数据库延迟1分钟原因。
+   3.cms垃圾回收器可回收浮动垃圾。
+   4.新生代存活的对象如何处理。
+   5.hashmap原理。
+   算法题： 搬家 远亲不如近邻
+   输入居民个数，搬家方案，居民位置，方案
+   输入：3, 2 [2, 4, 7],[5, 8]
+   输出：[1, 1]
+   搬到5的位置上，距离最近的居民是4，距离为1
+   搬到8的位置上，距离最近的居民是7，距离为1
+   【杭州IES互娱】
+   1.hashmap的原理，
+   2.resize的系列，0.75这个值怎么来的。
+   3.redis的数据结构，zset的实现，为什么用的跳表不是红黑树。
+   4.http请求的整个链路
+   算法题：链表重排序，基数位元素升序，偶数位降序。
+   【北京IES互娱】
+   1.如何实现并发调用多个RPC接口？
+   2.IO多路复用？select/poll/epoll的区别？
+   3.netty的NIO实现机制
+   4.redis
+   5.jvm垃圾回收算法
+   算法题：二叉树按层遍历，偶数层倒序
+   【杭州商业化广告】
+   1.301，302区别
+   2.Mysql checkpoint作用
+   3.Select和epoll区别
+   4.Redis rehash过程
+   5.Redis集群添加key的定位算法
+   6.Cms有几次stop the world
+   7.Rocket架构是什么
+   8.一道sql题，出现过2次及以上相同名字的人的名字
+   算法题：一道算法题，最大子数组，子数组可以组成顺子，求最大子数组长度，整数数组，比如31254637
+   子数组为125463，可以组成123456顺子
+   【上海教育中台】
+   1.分布式锁
+   2.多线程
+   3.消息队列保证消息有序
+   算法题：1-26对应a-z字母，随机写一个数字，输出所有的组合可能情况
+   算法题：两个链表融合成一个，并排序
 
 二面：
 
@@ -793,7 +804,6 @@ HR面：
 https://www.jianshu.com/p/d6e9b1c211dd
 
 # 项目相关：
-
 
 
 
