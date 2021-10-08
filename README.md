@@ -387,7 +387,15 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 9. [三色标记法与读写屏障](https://www.cnblogs.com/jmcui/p/14165601.html#_label4)
 
-   ​    
+10. full gc 触发条件有哪些？
+
+   - 在要进行 young gc 的时候，根据之前统计数据发现年轻代平均晋升大小比现在老年代剩余空间要大，那就会触发 full gc。
+   - 有永久代的话如果永久代满了也会触发 full gc。
+   - 老年代空间不足，大对象直接在老年代申请分配，如果此时老年代空间不足则会触发 full gc。
+   - 担保失败即 promotion failure，新生代的 to 区放不下从 eden 和 from 拷贝过来对象，或者新生代对象 gc 年龄到达阈值需要晋升这两种情况，老年代如果放不下的话都会触发 full gc。
+   - 执行 System.gc()、jmap -dump 等命令会触发 full gc。
+
+11. [TLAB和PLAB](https://xie.infoq.cn/article/ce5ad283b31a7bfe21ac5c542)
 
 
 # redis相关
@@ -487,8 +495,15 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 6. [kafka语义](https://blog.csdn.net/laojiaqi/article/details/79034798)
 
 
+
+# 分布式相关
+1.[分布式事务](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
+
+
 # 系统设计:
 1.[近8小时点击量最大的文章前100名]( https://juejin.im/post/5abcd6a0f265da23961279c8)
+
+
 
 # 公司面试
 
