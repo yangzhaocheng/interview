@@ -104,9 +104,9 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ## 树
 
-### 二叉树
+### [二叉树](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/tu-jie-er-cha-shu-de-si-chong-bian-li-by-z1m/)
 
-#### 基础
+#### [基础](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/leetcodesuan-fa-xiu-lian-dong-hua-yan-shi-xbian-2/)
 
 1. 递归的先序、中序、后序 o(n)
 2. 非递归的先序、中序、后序（复杂）o(n)
@@ -133,8 +133,13 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ## 图
 
-1. DFS BFS
-2. 查找两节点是否存在一条路径
+####   DFS BFS
+
+####   查找两节点是否存在一条路径
+
+####   二分图
+
+
 
 ## 查找
 
@@ -214,7 +219,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
  1.十进制求余、求商 （%10 、/10  [快乐数]([https://leetcode-cn.com/problems/happy-number/submissions/]))
  2.
 
-## 搜索、递归、回溯
+## 搜索、递归、回溯（就是树的遍历）
 
 ### 做搜索、回溯问题的套路是画图，代码其实就是根据画出的树形图写出来的。
 
@@ -244,19 +249,45 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 2. [有序数组两数之和](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/solution/shuang-zhi-zhen-on-shi-jian-fu-za-du-by-cyc2018/) [无序数组两数之和](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/) [3Sum](https://leetcode-cn.com/problems/3sum/solution/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/) （前后指针）
 
-3. [移除元素](https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode/) [移动零](https://leetcode-cn.com/problems/move-zeroes/solution/javashuang-zhi-zhen-zuo-fa-by-arthur-24/) （快慢指针）
+3. #### [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/solution/he-bing-liang-ge-you-xu-shu-zu-by-leetcode/)
 
-4. #### [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/solution/he-bing-liang-ge-you-xu-shu-zu-by-leetcode/)
+4. [盛最多水容器](https://leetcode-cn.com/problems/container-with-most-water/)
+
+ ## 快慢指针
+
+1.[寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)
+
+2.[环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
+
+3.[移除元素](https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode/) [移动零](https://leetcode-cn.com/problems/move-zeroes/solution/javashuang-zhi-zhen-zuo-fa-by-arthur-24/) （快慢指针）
+
+## 奇葩算法
+
+#### 并查集
+
+1.[头条坐一起](https://blog.csdn.net/weixin_34033624/article/details/88751113) 
+
+#### [匈牙利算法](https://zhuanlan.zhihu.com/p/96229700)
+
 
 ## 操作系统和redis相关使用的算法
 
 1. [LRU](https://blog.csdn.net/qq_26440803/article/details/83795122)
+
 2. [LRU和redis里面的实现](https://zhuanlan.zhihu.com/p/34133067)
+
+## 面试公司算法
+
+1.  [岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island/description/)
+
+2. [分数排名](https://leetcode-cn.com/problems/rank-scores/description/)
+
+
 
 
 # 智力题
 
-
+## [java](https://honeypps.com/java/7-most-popular-java-questions-on-stackoverflow/)
 
 # 计算机基础
 
@@ -301,6 +332,12 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 7.公有字段代理](https://mp.weixin.qq.com/s/edf9qy2Rthl9bzdxSxtAeQ)
 8.各种包装和基本类型转化
 
+9.sb的java [char类型转化](https://leetcode-cn.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters/)
+
+https://blog.csdn.net/qq_36323559/article/details/98183445
+
+https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
+
 
 
 ## 基本类型相关
@@ -313,16 +350,26 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ## 集合相关
 
 1. [HashMap java8 数据结构实现、查找、添加、扩容](https://zhuanlan.zhihu.com/p/21673805) 
+
 2. HashMap几个关键字段threshold，loadFactor，length，size，modCount 其中threshold =length * loadFactor，size超过threshold时就会resize；[多线程下HashMap死循环问题](https://blog.csdn.net/xuefeng0707/article/details/40797085)
+
 3. HashMap的Hash算法：**取key的hashCode值、高位运算、取模运算**
+
 4. [ConcurrentHashMap1.8](https://www.jianshu.com/p/c0642afe03e0) [ConcurrentHashMap1.7和1.8的不同实现](https://www.jianshu.com/p/e694f1e868ec)
+
 5. [ArrayBlockingQueue实现](https://blog.csdn.net/summerZBH123/article/details/80929902)
+
+6. Random
+
+   ![image-20220308184023598](/Users/momo/Library/Application Support/typora-user-images/image-20220308184023598.png)
+
 
 ## IO相关
 
 1. 基础IO、文件操作；NIO中Buffer 和 Channel（其中操作可以结合p2p项目源码看；[IO和NIO的区别](https://baijiahao.baidu.com/s?id=1632673729522644150&wfr=spider&for=pc)；ByteBuffer中的 [BIG_ENDIAN LITTLE_ENDIAN](https://www.cnblogs.com/sys-engineer/archive/2012/10/17/2728033.html) 其中[网络](https://blog.csdn.net/xiuzhentianting/article/details/73836699)和JVM虚拟接中采用BIG-ENDIAN 
 2. [BIO、AIO、NIO](https://blog.csdn.net/baiye_xing/article/details/73123753)  [Java 实现代码](https://blog.csdn.net/alan_liuyue/article/details/88640339)
 3. [Jdk epoll bug](https://www.jianshu.com/p/3ec120ca46b2) [netty 解决epoll bug](https://blog.csdn.net/baiye_xing/article/details/73351330)
+4. [ByteBuffer直接用堆外内存](https://blog.csdn.net/u014590757/article/details/79856425)
 
 ## 线程相关
 
@@ -412,6 +459,8 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 8. redis [分布式锁redis 命令](https://blog.csdn.net/lihao21/article/details/49104695)  [分布式锁 java 实现](https://my.oschina.net/dengfuwei/blog/1600681)  (结合cms改版看)
 9. [深入浅出Redis-redis底层数据结构（上）](https://www.cnblogs.com/jaycekon/p/6227442.html) [深入浅出Redis-redis底层数据结构（下）](https://www.cnblogs.com/jaycekon/p/6277653.html)
 10. [底层数据结构](https://blog.csdn.net/qq_36642340/article/details/81020477)
+10. [object idletime 命令不准问题](https://segmentfault.com/a/1190000023642663)
+10. [redis脑裂](https://www.xhyonline.com/?p=1171) [详细](https://blog.f-fox.com/2020/12/11/redis%E9%9B%86%E7%BE%A4%E8%84%91%E8%A3%82%E5%88%86%E6%9E%90/)
 
 ## 大数据算法相关
 
@@ -452,6 +501,12 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 
 
+1.[mysql线程池](https://dbaplus.cn/news-11-1989-1.html) [问题](https://app.yinxiang.com/fx/01cd837d-e01c-40e1-a551-51ab0471e19f)
+
+​				 						 		
+
+
+
 
 # spring 相关
 
@@ -480,10 +535,40 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 # netty参数
 
 1. [ChannelOption参数详解](https://www.jianshu.com/p/975b30171352)
+
 2. ChannelOption.SO_BACKLOG  ChannelOption.TCP_NODELAY ALLOW_HALF_CLOSURE
+
 3. [nettty调参](https://www.cnblogs.com/cfas/p/10422108.html)
-4. [编解码](https://blog.csdn.net/weixin_37855731/article/details/83506941)
+
+4. [编解码](https://www.cnblogs.com/qdhxhz/p/10245936.html)
+
+   FixedLengthFrameDecoder 定长协议解码器
+
+   LineBasedFrameDecoder 行分隔符解码器，遇到\n或者\r\n
+
+   DelimiterBasedFrameDecoder 分隔符解码器
+
+   | ClassName                                                    | 解释                           |
+   | ------------------------------------------------------------ | ------------------------------ |
+   | FixedLengthFrameDecoder                                      | 定长协议解码器                 |
+   | LineBasedFrameDecoder                                        | 行分隔符解码器，遇到\n或者\r\n |
+   | DelimiterBasedFrameDecoder                                   | 分隔符解码器                   |
+   | [LengthFieldBasedFrameDecoder](https://www.cnblogs.com/java-chen-hao/p/11571229.html) | 长度编码解码器                 |
+   | JsonObjectDecoder                                            | json格式解码器                 |
+   |                                                              |                                |
+
 5. https://www.jianshu.com/p/a618adef427c
+
+6. handler
+
+   | ClassName                                                    | 解释     |
+   | ------------------------------------------------------------ | -------- |
+   | [IdleStateHandler](https://www.cnblogs.com/xuwujing/p/7637265.html) | 心跳机制 |
+   | ReadTimeoutHandler                                           |          |
+   |                                                              |          |
+   |                                                              |          |
+
+   
 
 # kafka 相关
 
@@ -493,17 +578,54 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 4. [kafka consumer两种消费方式](https://www.jianshu.com/p/0a05633978f0)
 5. [TimingWheel 时间轮详解](https://blog.csdn.net/u013332124/article/details/82119144)
 6. [kafka语义](https://blog.csdn.net/laojiaqi/article/details/79034798)
+7. kafka延迟（深入理解Kafka核心设计与实践）
+8. [kafka面试点](https://www.bilibili.com/read/cv11525238)
+
+#大数据相关
+
+## hadoop架构
+   hive 看标签，自己本地搭过
+
+## hbase
+live-im使用过
+
+
+
+## [cassandra](https://developer.aliyun.com/article/718156)
+
+## flink
+sunwell使用
+
+##es
+live-log和recommend-moniter使用过
+
+
+
+
 
 
 
 # 分布式相关
 1.[分布式事务](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
 
+2.[CAP](https://www.cnblogs.com/duanxz/p/5229352.html)
+
 
 # 系统设计:
-1.[近8小时点击量最大的文章前100名]( https://juejin.im/post/5abcd6a0f265da23961279c8)
+1.[近8小时点击量最大的文章前100名]( https://juejin.im/post/5abcd6a0f265da23961279c8)  [Counter服务](https://xumc.github.io/blog/2019/11/23/counter-in-advertising)
 
+2.[千万级别贡献榜设计](https://blog.csdn.net/micro_hz/article/details/110919019)
 
+3.A文件有30亿个QQ号码，B文件有40亿个QQ号码，求A文件和B文件中QQ号码的交集，内存大小限制为1GB.(腾讯终面)
+
+bitmap HyperLogLog
+
+4.[短网址域名系统](https://hufangyun.com/2017/short-url/)
+5.[分布式唯一序列号生成服务](https://blog.csdn.net/Abysscarry/article/details/80445581)
+
+6.zset做事件处理器 连屏pk和星光pk，setnx加锁
+
+7.[缓存击穿](https://blog.csdn.net/zeb_perfect/article/details/54135506) 加锁 缓存租约
 
 # 公司面试
 
