@@ -363,6 +363,11 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
    ![image-20220308184023598](/Users/momo/Library/Application Support/typora-user-images/image-20220308184023598.png)
 
+   7.[Set和Map的关系](https://blog.csdn.net/yangying496875002/article/details/73729290)
+
+## Date相关
+
+1. [`SimpleDateFormat` 线程不安全的解决方案](https://segmentfault.com/a/1190000040010020)
 
 ## IO相关
 
@@ -374,20 +379,42 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 ## 线程相关
 
 1. [线程池原理](https://www.jianshu.com/p/87bff5cc8d8c) [线程池状态](https://blog.csdn.net/kuangsonghan/article/details/80674777)  [线程池相关面试题](https://www.nowcoder.com/discuss/152050)
+
 2. [Netty 线程模型](https://www.infoq.cn/article/netty-threading-model) [Netty 高效并发编程](https://blog.csdn.net/baiye_xing/article/details/73351330)
+
 3. 线程三种创建方式、[线程的5个状态和转化](https://blog.csdn.net/xingjing1226/article/details/81977129)、 sleep和yield不同、什么时候放弃同步监视器
+
 4. [synchronized和lock的区别](https://www.cnblogs.com/billmiao/p/9872163.html) [synchronized 原理](https://www.jianshu.com/p/19f861ab749e) [ReentrantLock原理](https://www.jianshu.com/p/4358b1466ec9)（再看）
+
 5. [volatile关键字](https://www.cnblogs.com/dolphin0520/p/3920373.html)：需要保证操作是原子性操作，才能保证使用volatile关键字的程序在并发时能够正确执行，也就是说基本数据类型的数值或者false赋值、volatile和Atomic* 一起使用
+
 6. [CAS](https://www.jianshu.com/p/fb6e91b013cc) [cas的ABA问题的解决方法](https://www.jianshu.com/p/8b227a8adbc1) 和 [使用方法](https://blog.csdn.net/xybz1993/article/details/79992120)
+
 7. [valatile cas -> atomic 无锁操作](https://www.cnblogs.com/dengzz/p/5688021.html)
+
 8. [AQS 原理](https://www.jianshu.com/p/d8eeb31bee5c) [公平锁 非公平锁 图解](https://blog.csdn.net/yanyan19880509/article/details/52435135)  [lock tryLock lockInterruptibly](https://www.zhihu.com/question/36771163)
+
 9. [重入锁](https://blog.csdn.net/u010173095/article/details/78621170)、[独占锁与共享锁](https://www.cnblogs.com/liuling/p/2013-8-21-03.html)（写锁、读锁）、公平锁与非公平锁 （默认false非公平锁，true为公平锁）、[悲观锁与乐观锁](http://blog.itpub.net/69903322/viewspace-2286168/) （synchronized lock 与 cas）
+
 10. [LongAdder](https://blog.csdn.net/zqz_zqz/article/details/70665941)
+
 11. [同步调用，异步回调和 Future 模式](https://blog.csdn.net/qq_35688140/article/details/83115723)
+
 12. [CountDownLatch、CyclicBarrier和Semaphore](https://www.cnblogs.com/dolphin0520/p/3920397.html)
+
 13. [grpc中的同步和异步](https://blog.csdn.net/huweijian5/article/details/83822470#grpc_2)
+
 14. [java有哪些锁？](https://www.cnblogs.com/chinaifae/articles/10338547.html)
+
 15. [AtomicReference](https://blog.csdn.net/chuanwen0451/article/details/100816412)
+
+15. 笔试题（多线程）
+
+  现在有5个程序员，现在有3个键盘以及3个鼠标。每个程序员需要领到1个键盘以及1个鼠标才能工作，没有领导鼠标或者键盘的程序员会等待。工作完成之后会归还键盘以及鼠标，然后重复领鼠标和键盘去工作。要求尽可能让每个程序员都能够工作和休息（不会出现某个程序员一直在工作，也不会出现某个程序员一直在休息）
+  
+15. 
+
+    
 
 ## 常见考题
 
@@ -507,8 +534,13 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 
 
-
 # spring 相关
+
+##spring
+
+1.[spring生命周期](https://juejin.cn/post/6844904065457979405)
+
+2.[获得**ApplicationContext**的方法](https://www.cnblogs.com/wangcp-2014/p/8126187.html)
 
 ## spring mysql操作
 
@@ -626,6 +658,8 @@ bitmap HyperLogLog
 6.zset做事件处理器 连屏pk和星光pk，setnx加锁
 
 7.[缓存击穿](https://blog.csdn.net/zeb_perfect/article/details/54135506) 加锁 缓存租约
+
+8.[京东秒杀架构升级优化实践](https://mp.weixin.qq.com/s/bo46q8ohuk78fqXJTaQavQ)
 
 # 公司面试
 
