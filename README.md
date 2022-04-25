@@ -627,6 +627,12 @@ bitmap HyperLogLog
 
 7.[缓存击穿](https://blog.csdn.net/zeb_perfect/article/details/54135506) 加锁 缓存租约
 
+8.[分页重复问题，按timestap做分页](https://blog.csdn.net/jack85986370/article/details/51483872)
+
+9.微信红包系统（并发，库存和红包裂变算法）
+
+10.im在线人数（不是简单的kafka消费，看im的实现）
+
 # 公司面试
 
 ## [头条(校招)：](https://mp.weixin.qq.com/s/REBPmDPLqxmzTUXU6Cmg7A)
@@ -942,5 +948,9 @@ https://www.jianshu.com/p/d6e9b1c211dd
 
 # 项目相关：
 
+# 工具相关：
+1.[git flow](https://www.ruanyifeng.com/blog/2015/12/git-workflow.html) 
 
+2.[ci cd](https://www.redhat.com/zh/topics/devops/what-is-ci-cd)
 
+3.[异地多活](http://kaito-kidd.com/2021/10/15/what-is-the-multi-site-high-availability-design/)
