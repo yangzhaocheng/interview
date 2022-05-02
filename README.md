@@ -312,11 +312,28 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
    内核/用户空间内存拷贝问题，需要复制大量的句柄数据结构，产生巨大的开销；
 
    触发方式是水平触发，应用程序如果没有完成对一个已经就绪的文件描述符进行IO，那么之后再次select调用还是会将这些文件描述符通知进程；
+   
+6. [文件描述符/文件句柄/文件指针的区别与联系](https://www.jianshu.com/p/ad879061edb2)
+
+​     **文件描述符是进程级别的，文件句柄是系统级别的**，不能混用。它们在不同级别表示已打开的文件。
+
+​      文件描述符与文件句柄直接关联，文件句柄与inode直接关联。
+
+​      文件描述符在POSIX系统调用中直接可见，文件指针是C语言在其基础上的包装。
+
+​      文件句柄在UNIX里不是个正式概念，所以无论在系统还是C语言API中都不显式存在。
+
+
+
+
 
 ## 计算机网络
 
 1. [TCP 的三次握手和四次捂手](https://blog.csdn.net/bit_clearoff/article/details/60884905) [流程](https://blog.csdn.net/whuslei/article/details/6667471)
 2. TCP的滑动窗口原理
+2. `[syns queue`（半连接队列）和`accept queue`（全连接队列）](https://www.cnblogs.com/wx170119/p/12068005.html)
+2. [tcp 发送缓冲区 和 接收缓冲区](https://www.teqng.com/2021/07/21/%e5%8a%a8%e5%9b%be%e5%9b%be%e8%a7%a3%ef%bc%81%e4%bb%a3%e7%a0%81%e6%89%a7%e8%a1%8csend%e6%88%90%e5%8a%9f%e5%90%8e%ef%bc%8c%e6%95%b0%e6%8d%ae%e5%b0%b1%e5%8f%91%e5%87%ba%e5%8e%bb%e4%ba%86%e5%90%97/#shen_me_shi_socket_huan_chong_qu) 
+2. [RTT](https://blog.csdn.net/qq_38890412/article/details/106663674) [MSL](https://blog.51cto.com/wushank/1135060)
 
 # java 相关 
 
@@ -412,7 +429,9 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
   现在有5个程序员，现在有3个键盘以及3个鼠标。每个程序员需要领到1个键盘以及1个鼠标才能工作，没有领导鼠标或者键盘的程序员会等待。工作完成之后会归还键盘以及鼠标，然后重复领鼠标和键盘去工作。要求尽可能让每个程序员都能够工作和休息（不会出现某个程序员一直在工作，也不会出现某个程序员一直在休息）
   
-15. 
+15. [ThreadLocal原理](https://zhuanlan.zhihu.com/p/150682678)和[应用](https://segmentfault.com/a/1190000040010020)
+
+15. [InheritableThreadLocal原理](https://zhuanlan.zhihu.com/p/101780720) 和 [解决办法](https://www.jianshu.com/p/29f4034f4250)
 
     
 
@@ -423,8 +442,8 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
    其中饿汉模式、懒汉模式（synchronized方法）、双重检查、静态内部类、枚举这五种可以用。
 
    2.[DCL](https://blog.csdn.net/qiyei2009/article/details/71813069)
-
-
+   
+   
 
 ## linux 命令常见面试题
 
@@ -470,6 +489,8 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
    - 执行 System.gc()、jmap -dump 等命令会触发 full gc。
 
 11. [TLAB和PLAB](https://xie.infoq.cn/article/ce5ad283b31a7bfe21ac5c542)
+
+11. [Java 反射为什么会慢？](https://juejin.cn/post/6844903965725818887)
 
 
 # redis相关
@@ -600,7 +621,9 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
    |                                                              |          |
    |                                                              |          |
 
-   
+7. [netty启动参数 ](https://www.jianshu.com/p/0bff7c020af2)[详细解释](https://www.liaoxuefeng.com/discuss/1279869501571105/1450880018677794)
+
+8. [reuseaddr和reuseport](https://www.jianshu.com/p/9cc2b5b9ad4d)
 
 # kafka 相关
 
