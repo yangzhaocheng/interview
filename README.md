@@ -433,6 +433,10 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 15. [InheritableThreadLocal原理](https://zhuanlan.zhihu.com/p/101780720) 和 [解决办法](https://www.jianshu.com/p/29f4034f4250)
 
+15. [ThreadLocal-hash冲突与内存泄漏](https://blog.csdn.net/Summer_And_Opencv/article/details/104632272)
+
+  
+  
     
 
 ## 常见考题
@@ -532,6 +536,11 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 6. [索引优化](https://www.jianshu.com/p/3ffb938a2622)
 7. [Mysql中myisam和innodb的区别](http://blog.itpub.net/21374452/viewspace-2136284/)
 8. [**普通索引**，**回表**，**索引覆盖**](https://www.jianshu.com/p/8991cbca3854)
+8. [可重复读和读已提交原理](https://cloud.tencent.com/developer/article/1811584)
+8. 左匹配原则
+8. [MVCC](https://www.modb.pro/db/75331)
+
+
 
 1、从0到1掌握mysql的索引系统
 
