@@ -358,15 +358,20 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 
 ## 基本类型相关
-[1.String#intern](https://tech.meituan.com/2014/03/06/in-depth-understanding-string-intern.html)
-解释的最清楚：https://blog.csdn.net/SEU_Calvin/article/details/52291082
+1. [ String#intern](https://tech.meituan.com/2014/03/06/in-depth-understanding-string-intern.html)
+   解释的最清楚：https://blog.csdn.net/SEU_Calvin/article/details/52291082
+
+2. [从JVM角度比较equals和==的区别](https://blog.csdn.net/seu_calvin/article/details/52089040)
+3. [String、StringBuider以及StringBuffer的区别和使用场景](https://blog.csdn.net/seu_calvin/article/details/52094905)
 
 
 
 
 ## 集合相关
 
-1. [HashMap java8 数据结构实现、查找、添加、扩容](https://zhuanlan.zhihu.com/p/21673805) 
+1. [HashMap java8 数据结构实现、查找、添加、扩容](https://zhuanlan.zhihu.com/p/21673805) 为什么扩容后的HashMap容量是之前容量的两倍？快
+
+   只需要看看原来的hash值新增的那个bit是1还是0就好了，是0的话索引没变，是1的话索引变成“原索引+oldCap”
 
 2. HashMap几个关键字段threshold，loadFactor，length，size，modCount 其中threshold =length * loadFactor，size超过threshold时就会resize；[多线程下HashMap死循环问题](https://blog.csdn.net/xuefeng0707/article/details/40797085)
 
@@ -399,11 +404,11 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 2. [Netty 线程模型](https://www.infoq.cn/article/netty-threading-model) [Netty 高效并发编程](https://blog.csdn.net/baiye_xing/article/details/73351330)
 
-3. 线程三种创建方式、[线程的5个状态和转化](https://blog.csdn.net/xingjing1226/article/details/81977129)、 sleep和yield不同、什么时候放弃同步监视器
+3. [线程三种创建方式、 sleep和yield不同、什么时候放弃同步监视器、Java线程的六种状态以及切换](https://segmentfault.com/a/1190000038392244)
 
 4. [synchronized和lock的区别](https://www.cnblogs.com/billmiao/p/9872163.html) [synchronized 原理](https://www.jianshu.com/p/19f861ab749e) [ReentrantLock原理](https://www.jianshu.com/p/4358b1466ec9)（再看）
 
-5. [volatile关键字](https://www.cnblogs.com/dolphin0520/p/3920373.html)：需要保证操作是原子性操作，才能保证使用volatile关键字的程序在并发时能够正确执行，也就是说基本数据类型的数值或者false赋值、volatile和Atomic* 一起使用
+5. [volatile关键字](https://www.cnblogs.com/dolphin0520/p/3920373.html)：需要保证操作是原子性操作，才能保证使用volatile关键字的程序在并发时能够正确执行，也就是说基本数据类型的数值或者false赋值、volatile和Atomic* 一起使用（缓存一致性问题 指令重排序问题）
 
 6. [CAS](https://www.jianshu.com/p/fb6e91b013cc) [cas的ABA问题的解决方法](https://www.jianshu.com/p/8b227a8adbc1) 和 [使用方法](https://blog.csdn.net/xybz1993/article/details/79992120)
 
@@ -429,7 +434,7 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
   现在有5个程序员，现在有3个键盘以及3个鼠标。每个程序员需要领到1个键盘以及1个鼠标才能工作，没有领导鼠标或者键盘的程序员会等待。工作完成之后会归还键盘以及鼠标，然后重复领鼠标和键盘去工作。要求尽可能让每个程序员都能够工作和休息（不会出现某个程序员一直在工作，也不会出现某个程序员一直在休息）
   
-15. [ThreadLocal原理](https://zhuanlan.zhihu.com/p/150682678)和[应用](https://segmentfault.com/a/1190000040010020)
+15. [ThreadLocal原理](https://zhuanlan.zhihu.com/p/150682678)和应用
 
 15. [InheritableThreadLocal原理](https://zhuanlan.zhihu.com/p/101780720) 和 [解决办法](https://www.jianshu.com/p/29f4034f4250)
 
@@ -529,15 +534,27 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 # mysql相关
 
 1. [MySQL的四种事务隔离级别](https://www.cnblogs.com/huanongying/p/7021555.html)
+
+   读未提交ru 读已提交rc 可重复读rr  串行化s
+
 2. [MySQL(Innodb)索引的原理](https://www.cnblogs.com/rjzheng/p/9915754.html)
-3. [记录锁，间隙锁，next-key锁](https://blog.csdn.net/bigtree_3721/article/details/73731377) [图](https://www.jianshu.com/p/bf862c37c4c9)
-4. [mysql/innoDB中，乐观锁，悲观锁，共享锁，排他锁，行锁，表锁，死锁概念的理解](mysql/innoDB中，乐观锁，悲观锁，共享锁，排他锁，行锁，表锁，死锁概念的理解)
+
+3. [记录锁，间隙锁，next-key锁](https://blog.csdn.net/qq_39751320/article/details/106299388) [图](https://www.jianshu.com/p/bf862c37c4c9)
+
+4. [mysql/innoDB中，乐观锁，悲观锁，共享锁，排他锁，行锁，表锁，死锁概念的理解](https://segmentfault.com/a/1190000015815061)
+
 5. [Left on/right on](https://blog.csdn.net/qq_35101027/article/details/78288279) [left join和inner join的效率对比](https://blog.csdn.net/LJFPHP/article/details/88635755)
+
 6. [索引优化](https://www.jianshu.com/p/3ffb938a2622)
+
 7. [Mysql中myisam和innodb的区别](http://blog.itpub.net/21374452/viewspace-2136284/)
+
 8. [**普通索引**，**回表**，**索引覆盖**](https://www.jianshu.com/p/8991cbca3854)
-8. [可重复读和读已提交原理](https://cloud.tencent.com/developer/article/1811584)
-8. 左匹配原则
+
+9. [可重复读和读已提交原理](https://cloud.tencent.com/developer/article/1811584)
+
+10. 左匹配原则
+
 8. [MVCC](https://www.modb.pro/db/75331)
 
 
@@ -645,6 +662,16 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 7. kafka延迟（深入理解Kafka核心设计与实践）
 8. [kafka面试点](https://www.bilibili.com/read/cv11525238)
 
+# zk相关：
+
+1. [zk面试题目](https://segmentfault.com/a/1190000014479433)
+2. [Zookeeper Curator 事件监听 ](https://www.cnblogs.com/crazymakercircle/p/10228385.html)
+3. Curator使用[流式风格](http://en.wikipedia.org/wiki/Fluent_interface)
+4. Zk的选举算法：basic paxos  fast paxos（系统默认）
+5. [zk的主从如何同步，如何主从选举、如何知道集群机器掉线](https://segmentfault.com/a/1190000014479433)
+6. zk集群的数据同步 （*写主还是写任意）*
+7. [Zookeeper实现分布式锁（保持独占，控制时序），分布式队列](https://blog.nowcoder.net/n/9ff38ae6af90475ea34f4236dd82859c?from=nowcoder_improve)
+
 #大数据相关
 
 ## hadoop架构
@@ -670,9 +697,13 @@ live-log和recommend-moniter使用过
 
 
 # 分布式相关
-1.[分布式事务](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
+1. [分布式事务](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
 
-2.[CAP](https://www.cnblogs.com/duanxz/p/5229352.html)
+2. [CAP](https://www.cnblogs.com/duanxz/p/5229352.html)
+
+3.  分布式锁实现的方式：
+
+4. 
 
 
 # 系统设计:
