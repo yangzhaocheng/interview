@@ -408,6 +408,8 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 4. [synchronized和lock的区别](https://www.cnblogs.com/billmiao/p/9872163.html) [synchronized 原理](https://www.jianshu.com/p/19f861ab749e) [ReentrantLock原理](https://www.jianshu.com/p/4358b1466ec9)（再看）
 
+4. [偏向锁，轻量级锁， 重量级锁](https://blog.csdn.net/lengxiao1993/article/details/81568130)
+
 5. [volatile关键字](https://www.cnblogs.com/dolphin0520/p/3920373.html)：需要保证操作是原子性操作，才能保证使用volatile关键字的程序在并发时能够正确执行，也就是说基本数据类型的数值或者false赋值、volatile和Atomic* 一起使用（缓存一致性问题 指令重排序问题）
 
 6. [CAS](https://www.jianshu.com/p/fb6e91b013cc) [cas的ABA问题的解决方法](https://www.jianshu.com/p/8b227a8adbc1) 和 [使用方法](https://blog.csdn.net/xybz1993/article/details/79992120)
@@ -469,7 +471,7 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 2. [gc](https://zhuanlan.zhihu.com/p/25539690)算法： **根搜索算法**、**标记 - 清除算法**、**复制算法**、**标记 - 整理算法**
 
-3. [**垃圾回收器**](https://zhuanlan.zhihu.com/p/25539690)：新生代：**Serial**、**ParNew**、**ParallelScavenge**（优先吞吐量）老生代:**SerialOld**、**ParallelOld**、**CMS （-XX:+UseConcMarkSweepGC 优**响应时间**）**
+3. **[垃圾回收器](https://www.cnblogs.com/ityouknow/p/5614961.html)**：新生代：**Serial**、**ParNew**、**ParallelScavenge**（优先吞吐量）老生代:**SerialOld**、**ParallelOld**、**CMS （-XX:+UseConcMarkSweepGC 优**响应时间**）**
 
    其中新生代使用复制算法、老生代使用标记-整理算法，除了CMS（ 标记-清理）
 
@@ -481,7 +483,7 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 5. [什么时候进行gc](https://www.zhihu.com/question/41922036/answer/154212925)
 
-6. [G1算法](https://www.cnblogs.com/ityouknow/p/5614961.html)
+6. [G1算法](https://www.cnblogs.com/ityouknow/p/5614961.html) G1[总结](https://blog.csdn.net/zy1994hyq/article/details/102495471)
 
 7. [JVM内存结构、Java内存模型 、Java对象模型](https://mp.weixin.qq.com/s/i_i3aT48NCPukE_6w9Srng)
 
@@ -653,14 +655,45 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 # kafka 相关
 
-1. kafka 如何做到高吞吐量、低延时；负载均衡和故障转移；伸缩性（zk保持。
+1. kafka 如何做到
+
+   - 高吞吐量、低延时；
+
+     1.批处理（提高吞吐量）
+
+     2.![image-20220518223341570](/Users/momo/Library/Application Support/typora-user-images/image-20220518223341570.png)
+
+     3.sendfile和零拷贝
+
+      a.用内核驱动程序处理IO数据，不需要上下文切换，节省内核缓冲区和用户态程序缓冲区的数据拷贝
+
+      b.使用直接储存访问技术（DMA)，避免OS内核缓冲区之间的数据拷贝
+
+     ![image-20220518224324481](/Users/momo/Library/Application Support/typora-user-images/image-20220518224324481.png)
+
+      ![image-20220518224345514](/Users/momo/Library/Application Support/typora-user-images/image-20220518224345514.png)
+
+   - 消息持久化
+
+   - 负载均衡和故障转移
+
+   - 伸缩性
+
 2. kakfa topic-partition-message
+
 3. 怎么做数据恢复的？数据会不会漏？
+
 4. [kafka consumer两种消费方式](https://www.jianshu.com/p/0a05633978f0)
+
 5. [TimingWheel 时间轮详解](https://blog.csdn.net/u013332124/article/details/82119144)
+
 6. [kafka语义](https://blog.csdn.net/laojiaqi/article/details/79034798)
+
 7. kafka延迟（深入理解Kafka核心设计与实践）
+
 8. [kafka面试点](https://www.bilibili.com/read/cv11525238)
+
+8. acks
 
 # zk相关：
 
