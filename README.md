@@ -276,6 +276,20 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 2. [LRU和redis里面的实现](https://zhuanlan.zhihu.com/p/34133067)
 
+3. 布隆过滤器使用场景
+
+   1. 黑名单校验
+
+   2. 快速去重
+
+   3. 爬虫URL校验
+
+   4. leveldb/rocksdb快速判断数据是否已经block中，避免频繁访问磁盘
+
+   5. 解决缓存穿透问题
+
+      计数布隆过滤器
+
 ## 面试公司算法
 
 1.  [岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island/description/)
@@ -334,6 +348,20 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 2. `[syns queue`（半连接队列）和`accept queue`（全连接队列）](https://www.cnblogs.com/wx170119/p/12068005.html)
 2. [tcp 发送缓冲区 和 接收缓冲区](https://www.teqng.com/2021/07/21/%e5%8a%a8%e5%9b%be%e5%9b%be%e8%a7%a3%ef%bc%81%e4%bb%a3%e7%a0%81%e6%89%a7%e8%a1%8csend%e6%88%90%e5%8a%9f%e5%90%8e%ef%bc%8c%e6%95%b0%e6%8d%ae%e5%b0%b1%e5%8f%91%e5%87%ba%e5%8e%bb%e4%ba%86%e5%90%97/#shen_me_shi_socket_huan_chong_qu) 
 2. [RTT](https://blog.csdn.net/qq_38890412/article/details/106663674) [MSL](https://blog.51cto.com/wushank/1135060)
+2. epoll 边缘触发 和水平触发区别 ss
+2. [tcp为什么用三次握手](https://blog.csdn.net/lengxiao1993/article/details/82771768) [书里的解释](http://www.justdojava.com/2021/03/28/tcp/)
+2. [tcp为什么必须四次挥手](http://www.justdojava.com/2021/03/28/tcp/) [是否有三次挥手](https://www.cnblogs.com/GuoXinxin/p/11657933.html)
+2. [长连接、短连接、长轮询、短轮询、WebSocket释疑](https://segmentfault.com/a/1190000020427990)
+2. [四层负载均衡 和 七层负载均衡](https://www.modb.pro/db/190731)
+2. [lvs架构](https://blog.csdn.net/w50feng/article/details/118028881) [lvs架构和原理和四种模式](https://www.modb.pro/db/190731)
+2. [负载均衡](https://www.modb.pro/db/79441)
+2. [网卡bond](https://www.linuxprobe.com/actual-combat-nic-bond.html)
+2. [NAT FULLNAT 模式](https://blog.csdn.net/m0_37740029/article/details/117248710)
+2. [dpvs简介和原理和优化](https://zhuanlan.zhihu.com/p/344194786)
+2. [dpvs支持高可用](https://blog.51cto.com/u_15282126/2947767)
+
+      目前线上有上千条业务转发规则，每天承接着来自公司内部、外部共近 5T的服务带宽和 1Billion并发连接量。下图是我们一种常用的 DPVS集群化部署方式：多台 DPVS服务器通过等价多路径路由构成一个服务集群，每台 DPVS服务器配置多台 nginx作为其后端服务器，nginx   以反向代理的方式为最终的应用服务器提供七层负载均衡和高可用性服务。这是一种高可用、高伸缩性的集群化方式，任何一台 APPServer或中间转发节点的故障不会影响整体服务，四层负载均衡器 DPVS、七层反向代理服务器 nginx和应用服务器都能在不影响现有服务的条件下很方便地完成扩容。
+![img](https://oss-emcsprod-public.modb.pro/wechatSpider/modb_20211207_8a44f798-5701-11ec-8cf6-fa163eb4f6be.png)
 
 # java 相关 
 
@@ -359,8 +387,7 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 ## 基本类型相关
 1. [ String#intern](https://tech.meituan.com/2014/03/06/in-depth-understanding-string-intern.html)
-   解释的最清楚：https://blog.csdn.net/SEU_Calvin/article/details/52291082
-
+  
 2. [从JVM角度比较equals和==的区别](https://blog.csdn.net/seu_calvin/article/details/52089040)
 3. [String、StringBuider以及StringBuffer的区别和使用场景](https://blog.csdn.net/seu_calvin/article/details/52094905)
 
@@ -396,7 +423,8 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 1. 基础IO、文件操作；NIO中Buffer 和 Channel（其中操作可以结合p2p项目源码看；[IO和NIO的区别](https://baijiahao.baidu.com/s?id=1632673729522644150&wfr=spider&for=pc)；ByteBuffer中的 [BIG_ENDIAN LITTLE_ENDIAN](https://www.cnblogs.com/sys-engineer/archive/2012/10/17/2728033.html) 其中[网络](https://blog.csdn.net/xiuzhentianting/article/details/73836699)和JVM虚拟接中采用BIG-ENDIAN 
 2. [BIO、AIO、NIO](https://blog.csdn.net/baiye_xing/article/details/73123753)  [Java 实现代码](https://blog.csdn.net/alan_liuyue/article/details/88640339)
 3. [Jdk epoll bug](https://www.jianshu.com/p/3ec120ca46b2) [netty 解决epoll bug](https://blog.csdn.net/baiye_xing/article/details/73351330)
-4. [ByteBuffer直接用堆外内存](https://blog.csdn.net/u014590757/article/details/79856425)
+4. [ByteBuffer直接用堆外内存](https://blog.csdn.net/u014590757/article/details/79856425) [ByteBuffer大端](https://www.cnblogs.com/naughtycat/p/little-endian-and-big-endian-based-on-bytebuffer-in-java.html)
+4. [epoll 边缘触发 和水平触发区别](https://juejin.cn/post/6844903878685622285)
 
 ## 线程相关
 
@@ -407,6 +435,8 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 3. [线程三种创建方式、 sleep和yield不同、什么时候放弃同步监视器、Java线程的六种状态以及切换](https://segmentfault.com/a/1190000038392244)
 
 4. [synchronized和lock的区别](https://www.cnblogs.com/billmiao/p/9872163.html) [synchronized 原理](https://www.jianshu.com/p/19f861ab749e) [ReentrantLock原理](https://www.jianshu.com/p/4358b1466ec9)（再看）
+
+4. sychronized也支持可重入锁
 
 4. [偏向锁，轻量级锁， 重量级锁](https://blog.csdn.net/lengxiao1993/article/details/81568130)
 
@@ -442,6 +472,8 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 15. [ThreadLocal-hash冲突与内存泄漏](https://blog.csdn.net/Summer_And_Opencv/article/details/104632272)
 
+15. [如何确保三个线程顺序执行？](https://blog.csdn.net/Evankaka/article/details/80800081)
+
   
   
     
@@ -469,7 +501,9 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 1. [JVM精讲](https://www.cnblogs.com/jmcui/category/1503029.html)
 
-2. [gc](https://zhuanlan.zhihu.com/p/25539690)算法： **根搜索算法**、**标记 - 清除算法**、**复制算法**、**标记 - 整理算法**
+1. [**新生代** 老年代 永生代](https://zhuanlan.zhihu.com/p/25539690)
+
+2. [gc算法：](https://www.cnblogs.com/ityouknow/p/5614961.html) **根搜索算法**、**标记 - 清除算法**、**复制算法**、**标记 - 整理算法**
 
 3. **[垃圾回收器](https://www.cnblogs.com/ityouknow/p/5614961.html)**：新生代：**Serial**、**ParNew**、**ParallelScavenge**（优先吞吐量）老生代:**SerialOld**、**ParallelOld**、**CMS （-XX:+UseConcMarkSweepGC 优**响应时间**）**
 
@@ -481,9 +515,15 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 4. [jvm的内存分布](https://www.cnblogs.com/wtzbk/p/7985156.html?clicktime=1573004363&enterid=1573004363)（看书）
 
-5. [什么时候进行gc](https://www.zhihu.com/question/41922036/answer/154212925)
+5. [什么时候进行gc ](https://www.zhihu.com/question/41922036/answer/154212925)
 
-6. [G1算法](https://www.cnblogs.com/ityouknow/p/5614961.html) G1[总结](https://blog.csdn.net/zy1994hyq/article/details/102495471)
+6. [G1算法](https://www.cnblogs.com/ityouknow/p/5614961.html) G1[总结 ](https://blog.csdn.net/zy1994hyq/article/details/102495471) [G1和CMS区别](https://zhuanlan.zhihu.com/p/126296343)
+
+6. [ZGC](https://zhuanlan.zhihu.com/p/105921339) [ZGC和G1的区别](https://tech.meituan.com/2020/08/06/new-zgc-practice-in-meituan.html) 着色指针和读屏障技术，解决了转移过程中准确访问对象的问题
+
+6. [SGC(Shenandoah GC)](https://blog.51cto.com/u_14230003/2435438)
+
+6. [**Zing**](https://blog.csdn.net/21aspnet/article/details/88667880)
 
 7. [JVM内存结构、Java内存模型 、Java对象模型](https://mp.weixin.qq.com/s/i_i3aT48NCPukE_6w9Srng)
 
@@ -501,7 +541,13 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 11. [TLAB和PLAB](https://xie.infoq.cn/article/ce5ad283b31a7bfe21ac5c542)
 
-11. [Java 反射为什么会慢？](https://juejin.cn/post/6844903965725818887)
+16. [Java 反射为什么会慢？](https://juejin.cn/post/6844903965725818887)
+
+17. [go的gc](https://liangyaopei.github.io/2021/01/02/golang-gc-intro/)
+
+18. [java 1.7 1.8的区别](https://blog.csdn.net/lovely_girl1126/article/details/106806879)
+
+11. [java对象在jvm详情](https://www.cnblogs.com/rickiyang/p/14206724.html)
 
 
 # redis相关
@@ -513,13 +559,15 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 3. redis 相关题目 ([基础](https://www.cnblogs.com/jasontec/p/9699242.html))
 4. redis rdb 和aof [aof](https://redisbook.readthedocs.io/en/latest/internal/aof.html) [rdb](https://redisbook.readthedocs.io/en/latest/internal/rdb.html) [遇到的问题](https://www.iteye.com/blog/xiaoz5919-2093393)、[SAVE BGSAVE BGREWRITEAOF](https://redisbook.readthedocs.io/en/latest/internal/rdb.html)、[AOF RDB持久化高度概括](https://blog.csdn.net/qq_21688757/article/details/79233490)    ***要再看***
 5. [缓存穿透，缓存击穿，缓存雪崩](https://blog.csdn.net/zeb_perfect/article/details/54135506)
-6. [redis的架构模式](https://www.cnblogs.com/jasontec/p/9699242.html) 单机 主从 [sentinel](https://www.jianshu.com/p/06ab9daf921d)  [proxy](https://juejin.im/post/5c132b076fb9a04a08218eef) cluster
-7. [Redis集群方案](https://juejin.im/post/5c132b076fb9a04a08218eef)  Redis cluster [哈希槽](https://blog.csdn.net/z15732621582/article/details/79121213) [一致性hash](https://www.cnblogs.com/lpfuture/p/5796398.html)
+5. [布隆过滤器](https://zhuanlan.zhihu.com/p/43263751) [redis bitmap使用](https://www.cnblogs.com/54chensongxia/p/13794391.html)
+6. [redis的架构模式](https://www.cnblogs.com/jasontec/p/9699242.html) 单机 主从 [sentinel](https://www.jianshu.com/p/06ab9daf921d)  [proxy](https://juejin.im/post/5c132b076fb9a04a08218eef) [cluster](https://blog.51cto.com/alex4dream/2802508)
+7. [Redis集群方案](https://www.cnblogs.com/crazymakercircle/p/14282108.html) Redis cluster [哈希槽](https://blog.csdn.net/z15732621582/article/details/79121213) [一致性hash](https://www.cnblogs.com/lpfuture/p/5796398.html)
 8. redis [分布式锁redis 命令](https://blog.csdn.net/lihao21/article/details/49104695)  [分布式锁 java 实现](https://my.oschina.net/dengfuwei/blog/1600681)  (结合cms改版看)
 9. [深入浅出Redis-redis底层数据结构（上）](https://www.cnblogs.com/jaycekon/p/6227442.html) [深入浅出Redis-redis底层数据结构（下）](https://www.cnblogs.com/jaycekon/p/6277653.html)
 10. [底层数据结构](https://blog.csdn.net/qq_36642340/article/details/81020477)
 10. [object idletime 命令不准问题](https://segmentfault.com/a/1190000023642663)
 10. [redis脑裂](https://www.xhyonline.com/?p=1171) [详细](https://blog.f-fox.com/2020/12/11/redis%E9%9B%86%E7%BE%A4%E8%84%91%E8%A3%82%E5%88%86%E6%9E%90/)
+10. [zskiplist实现](https://blog.csdn.net/riemann_/article/details/116901500) [插入](https://segmentfault.com/a/1190000022320734)
 
 ## 大数据算法相关
 
@@ -557,7 +605,9 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 10. 左匹配原则
 
-8. [MVCC](https://www.modb.pro/db/75331)
+11. [MVCC](https://www.modb.pro/db/75331)
+
+8. [B-/+/*树，为什么mysql用B+](https://www.jianshu.com/p/ace3cd6526c4)
 
 
 
@@ -695,6 +745,12 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 8. acks
 
+# RocketMq
+
+1. [Kakfa和RocketMq的区别](https://blog.csdn.net/shijinghan1126/article/details/104724407) 
+2. [RocketMq如何做到消息不可丢](https://zhuanlan.zhihu.com/p/465112826)
+2. [Kafka和RocketMQ实现原理对比](https://mp.weixin.qq.com/s/kme1N1VH5enXpKQ52V6Fbg)
+
 # zk相关：
 
 1. [zk面试题目](https://segmentfault.com/a/1190000014479433)
@@ -748,7 +804,7 @@ live-log和recommend-moniter使用过
 
 bitmap HyperLogLog
 
-4.[短网址域名系统](https://hufangyun.com/2017/short-url/)
+4.[短网址域名系统](https://hufangyun.com/2017/short-url/) [系统架构](https://blog.51cto.com/u_10180290/3226500)
 5.[分布式唯一序列号生成服务](https://blog.csdn.net/Abysscarry/article/details/80445581)
 
 6.zset做事件处理器 连屏pk和星光pk，setnx加锁
@@ -761,6 +817,10 @@ bitmap HyperLogLog
 10.im在线人数（不是简单的kafka消费，看im的实现）
 
 11.[京东秒杀架构升级优化实践](https://mp.weixin.qq.com/s/bo46q8ohuk78fqXJTaQavQ)
+
+13[.im go的长连接gc问题](https://cloud.tencent.com/developer/article/1069321)
+
+14.[巧用 Bitmap 实现亿级数据统计](https://segmentfault.com/a/1190000040177140)
 
 # 公司面试
 
