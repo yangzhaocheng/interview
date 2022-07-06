@@ -309,6 +309,8 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 1. [进程和线程的区别](https://blog.csdn.net/kuangsonghan/article/details/80674777)
 
+1. [进程、线程及协程的区别](https://blog.csdn.net/weixin_49199646/article/details/109210547)
+
 2. [页缓存](https://blog.csdn.net/Joy0709/article/details/41879001) [DMA](https://blog.csdn.net/zhejfl/article/details/82555634) [虚拟内存](https://www.jianshu.com/p/13e337312651)
 
 3. [零拷贝](https://mp.weixin.qq.com/s/WqXU7zfRPeMznOESRphbxg)
@@ -360,8 +362,11 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 2. [dpvs简介和原理和优化](https://zhuanlan.zhihu.com/p/344194786)
 2. [dpvs支持高可用](https://blog.51cto.com/u_15282126/2947767)
 
-      目前线上有上千条业务转发规则，每天承接着来自公司内部、外部共近 5T的服务带宽和 1Billion并发连接量。下图是我们一种常用的 DPVS集群化部署方式：多台 DPVS服务器通过等价多路径路由构成一个服务集群，每台 DPVS服务器配置多台 nginx作为其后端服务器，nginx   以反向代理的方式为最终的应用服务器提供七层负载均衡和高可用性服务。这是一种高可用、高伸缩性的集群化方式，任何一台 APPServer或中间转发节点的故障不会影响整体服务，四层负载均衡器 DPVS、七层反向代理服务器 nginx和应用服务器都能在不影响现有服务的条件下很方便地完成扩容。
+      目前线上有上千条业务转发规则，每天承接着来自公司内部、外部共近 5T的服务带宽和 1Billion并发连接量。下图是我们一种常用的 DPVS集群化部署方式：多台 DPVS服务器通过c构成一个服务集群，每台 DPVS服务器配置多台 nginx作为其后端服务器，nginx   以反向代理的方式为最终的应用服务器提供七层负载均衡和高可用性服务。这是一种高可用、高伸缩性的集群化方式，任何一台 APPServer或中间转发节点的故障不会影响整体服务，四层负载均衡器 DPVS、七层反向代理服务器 nginx和应用服务器都能在不影响现有服务的条件下很方便地完成扩容。
 ![img](https://oss-emcsprod-public.modb.pro/wechatSpider/modb_20211207_8a44f798-5701-11ec-8cf6-fa163eb4f6be.png)
+
+17. [dpvs集群模式](https://cloud.tencent.com/developer/news/841720)
+18. [BGP 会话的负载平衡](https://www.juniper.net/documentation/cn/zh/software/junos/bgp/topics/topic-map/load-balancing-bgp-session.html)
 
 # java 相关 
 
@@ -395,6 +400,8 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 
 ## 集合相关
+
+1. [ArrayList与LinkedList的区别](https://www.cnblogs.com/zhukf/p/13713533.html)  [LinkedList原理](https://www.cnblogs.com/baojun/p/11087015.html)  [ArrayList扩容日志](https://zhuanlan.zhihu.com/p/409503569)
 
 1. [HashMap java8 数据结构实现、查找、添加、扩容](https://zhuanlan.zhihu.com/p/21673805) 为什么扩容后的HashMap容量是之前容量的两倍？快
 
@@ -806,6 +813,8 @@ bitmap HyperLogLog
 
 4.[短网址域名系统](https://hufangyun.com/2017/short-url/) [系统架构](https://blog.51cto.com/u_10180290/3226500)
 5.[分布式唯一序列号生成服务](https://blog.csdn.net/Abysscarry/article/details/80445581)
+
+[时间回拨问题处理](https://blog.csdn.net/qq_26222859/article/details/123689230)
 
 6.zset做事件处理器 连屏pk和星光pk，setnx加锁
 
