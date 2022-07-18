@@ -394,7 +394,7 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 
 
-## 集合相关
+## 基本集合相关
 
 1. [HashMap java8 数据结构实现、查找、添加、扩容](https://zhuanlan.zhihu.com/p/21673805) 为什么扩容后的HashMap容量是之前容量的两倍？快
 
@@ -408,11 +408,19 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 5. [ArrayBlockingQueue实现](https://blog.csdn.net/summerZBH123/article/details/80929902)
 
+5. [HashMap LinkedHahsMap TreeMap](https://juejin.cn/post/6844904069648089102)
+
+5. ArrayList LinkedList 区别
+
+5. [Set和Map的关系](https://blog.csdn.net/yangying496875002/article/details/73729290)
+
 6. Random
 
    ![image-20220308184023598](/Users/momo/Library/Application Support/typora-user-images/image-20220308184023598.png)
 
-   7.[Set和Map的关系](https://blog.csdn.net/yangying496875002/article/details/73729290)
+## 高级集合
+
+   
 
 ## Date相关
 
@@ -428,7 +436,7 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 ## 线程相关
 
-1. [线程池原理](https://www.jianshu.com/p/87bff5cc8d8c) [线程池状态](https://blog.csdn.net/kuangsonghan/article/details/80674777)  [线程池相关面试题](https://www.nowcoder.com/discuss/152050)
+1. [线程池原理](https://www.jianshu.com/p/87bff5cc8d8c) [线程池状态](https://blog.csdn.net/kuangsonghan/article/details/80674777)  [线程池相关面试题](https://www.nowcoder.com/discuss/152050) 线程数核心个数和最大个数设置大小
 
 2. [Netty 线程模型](https://www.infoq.cn/article/netty-threading-model) [Netty 高效并发编程](https://blog.csdn.net/baiye_xing/article/details/73351330)
 
@@ -569,6 +577,10 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 10. [redis脑裂](https://www.xhyonline.com/?p=1171) [详细](https://blog.f-fox.com/2020/12/11/redis%E9%9B%86%E7%BE%A4%E8%84%91%E8%A3%82%E5%88%86%E6%9E%90/)
 10. [zskiplist实现](https://blog.csdn.net/riemann_/article/details/116901500) [插入](https://segmentfault.com/a/1190000022320734)
 
+# java架构相关
+
+1. [Apache Commons Pool池化技术](https://zhuanlan.zhihu.com/p/415174080)
+
 ## 大数据算法相关
 
 1. [两个大文件中找出共同记录](https://blog.csdn.net/u011389515/article/details/80526971)
@@ -607,7 +619,9 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 11. [MVCC](https://www.modb.pro/db/75331)
 
-8. [B-/+/*树，为什么mysql用B+](https://www.jianshu.com/p/ace3cd6526c4)
+12. [B-/+/*树，为什么mysql用B+](https://www.jianshu.com/p/ace3cd6526c4)
+
+8. [分库分表](https://tech.meituan.com/2016/11/18/dianping-order-db-sharding.html)
 
 
 
@@ -750,6 +764,7 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 1. [Kakfa和RocketMq的区别](https://blog.csdn.net/shijinghan1126/article/details/104724407) 
 2. [RocketMq如何做到消息不可丢](https://zhuanlan.zhihu.com/p/465112826)
 2. [Kafka和RocketMQ实现原理对比](https://mp.weixin.qq.com/s/kme1N1VH5enXpKQ52V6Fbg)
+2. Mq做定时任务
 
 # zk相关：
 
