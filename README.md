@@ -309,6 +309,8 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 1. [进程和线程的区别](https://blog.csdn.net/kuangsonghan/article/details/80674777)
 
+1. [进程、线程及协程的区别](https://blog.csdn.net/weixin_49199646/article/details/109210547)
+
 2. [页缓存](https://blog.csdn.net/Joy0709/article/details/41879001) [DMA](https://blog.csdn.net/zhejfl/article/details/82555634) [虚拟内存](https://www.jianshu.com/p/13e337312651)
 
 3. [零拷贝](https://mp.weixin.qq.com/s/WqXU7zfRPeMznOESRphbxg)
@@ -360,8 +362,11 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 2. [dpvs简介和原理和优化](https://zhuanlan.zhihu.com/p/344194786)
 2. [dpvs支持高可用](https://blog.51cto.com/u_15282126/2947767)
 
-      目前线上有上千条业务转发规则，每天承接着来自公司内部、外部共近 5T的服务带宽和 1Billion并发连接量。下图是我们一种常用的 DPVS集群化部署方式：多台 DPVS服务器通过等价多路径路由构成一个服务集群，每台 DPVS服务器配置多台 nginx作为其后端服务器，nginx   以反向代理的方式为最终的应用服务器提供七层负载均衡和高可用性服务。这是一种高可用、高伸缩性的集群化方式，任何一台 APPServer或中间转发节点的故障不会影响整体服务，四层负载均衡器 DPVS、七层反向代理服务器 nginx和应用服务器都能在不影响现有服务的条件下很方便地完成扩容。
+      目前线上有上千条业务转发规则，每天承接着来自公司内部、外部共近 5T的服务带宽和 1Billion并发连接量。下图是我们一种常用的 DPVS集群化部署方式：多台 DPVS服务器通过c构成一个服务集群，每台 DPVS服务器配置多台 nginx作为其后端服务器，nginx   以反向代理的方式为最终的应用服务器提供七层负载均衡和高可用性服务。这是一种高可用、高伸缩性的集群化方式，任何一台 APPServer或中间转发节点的故障不会影响整体服务，四层负载均衡器 DPVS、七层反向代理服务器 nginx和应用服务器都能在不影响现有服务的条件下很方便地完成扩容。
 ![img](https://oss-emcsprod-public.modb.pro/wechatSpider/modb_20211207_8a44f798-5701-11ec-8cf6-fa163eb4f6be.png)
+
+17. [dpvs集群模式](https://cloud.tencent.com/developer/news/841720)
+18. [BGP 会话的负载平衡](https://www.juniper.net/documentation/cn/zh/software/junos/bgp/topics/topic-map/load-balancing-bgp-session.html)
 
 # java 相关 
 
@@ -396,6 +401,8 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 ## 基本集合相关
 
+1. [ArrayList与LinkedList的区别](https://www.cnblogs.com/zhukf/p/13713533.html)  [LinkedList原理](https://www.cnblogs.com/baojun/p/11087015.html)  [ArrayList扩容机制](https://zhuanlan.zhihu.com/p/409503569)
+
 1. [HashMap java8 数据结构实现、查找、添加、扩容](https://zhuanlan.zhihu.com/p/21673805) 为什么扩容后的HashMap容量是之前容量的两倍？快
 
    只需要看看原来的hash值新增的那个bit是1还是0就好了，是0的话索引没变，是1的话索引变成“原索引+oldCap”
@@ -422,6 +429,11 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
    
 
+## 高级java类型
+
+1. CopyOnWriteArrayList [CopyOnWriteArraySet](https://www.jianshu.com/p/f55bf8a8520e)
+2. [BlockingQueue ConcurrentLinkedQueue](https://www.cnblogs.com/linjiqin/archive/2013/05/30/3108188.html)  [Blocking](https://www.jianshu.com/p/b1408e3e3bb4)
+
 ## Date相关
 
 1. [`SimpleDateFormat` 线程不安全的解决方案](https://segmentfault.com/a/1190000040010020)
@@ -442,7 +454,11 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 3. [线程三种创建方式、 sleep和yield不同、什么时候放弃同步监视器、Java线程的六种状态以及切换](https://segmentfault.com/a/1190000038392244)
 
+3. [Thread.interrupt()到底做了啥 ](https://www.jianshu.com/p/e2b22c6bcd22)[LockSupport](https://blog.csdn.net/aitangyong/article/details/38373137)
+
 4. [synchronized和lock的区别](https://www.cnblogs.com/billmiao/p/9872163.html) [synchronized 原理](https://www.jianshu.com/p/19f861ab749e) [ReentrantLock原理](https://www.jianshu.com/p/4358b1466ec9)（再看）
+
+4. [AQS详解](https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html)
 
 4. sychronized也支持可重入锁
 
@@ -482,6 +498,38 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 15. [如何确保三个线程顺序执行？](https://blog.csdn.net/Evankaka/article/details/80800081)
 
+15. [CompletableFuture](https://juejin.cn/post/6844904195162636295) 男女赛项目
+
+  ```java
+     GenderRankVo vo = new GenderRankVo();
+      try {
+        Map<SexEnum, CompletableFuture<List<StarRankItem>>> futureMap = new ConcurrentHashMap<>();
+        for (SexEnum sex : SexEnum.values()) {
+          CompletableFuture<List<StarRankItem>> future = CompletableFuture.supplyAsync(() ->
+              querySexRank(sex, momoid, trackId, offset, size), ThreadExecuterUtil.genderRankExecutor);
+          futureMap.put(sex, future);
+        }
+        CompletableFuture.allOf(futureMap.values().toArray(new CompletableFuture[futureMap.values().size()])).join();
+  
+        for (Entry<SexEnum, CompletableFuture<List<StarRankItem>>> entry : futureMap.entrySet()) {
+          SexEnum sex = entry.getKey();
+          if (sex == SexEnum.FEMALE) {
+            vo.setFemaleLists(entry.getValue().get());
+          } else if (sex == SexEnum.MALE) {
+            vo.setMaleLists(entry.getValue().get());
+          }
+        }
+      } catch (Exception e) {
+        log.error("queryGenderDoubleRank fail", e);
+        Monitor.inc(MonitorConstant.queryGenderDoubleRank);
+      }
+      return vo;
+  ```
+  
+  
+  
+  
+  
   
   
     
@@ -555,7 +603,35 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 18. [java 1.7 1.8的区别](https://blog.csdn.net/lovely_girl1126/article/details/106806879)
 
-11. [java对象在jvm详情](https://www.cnblogs.com/rickiyang/p/14206724.html)
+19. [java对象在jvm详情](https://www.cnblogs.com/rickiyang/p/14206724.html)
+
+20. [强引用、软引用、弱引用和虚引用](https://juejin.cn/post/6844903665241686029)
+
+11. 
+
+
+
+## java关键类源码
+
+1. ThreadPoolExecutor 类源码分享 afterExecute方法执行后打点
+
+
+
+
+
+# java Framework
+
+## guava
+
+1. [guava](https://app.yinxiang.com/fx/bda2e8b4-608d-4b67-8d70-840ea5d39576)基础
+
+## EventBus
+
+1. [EventBus源码](https://blog.csdn.net/u014634338/article/details/91340593)
+
+
+
+
 
 
 # redis相关
@@ -569,12 +645,15 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 5. [缓存穿透，缓存击穿，缓存雪崩](https://blog.csdn.net/zeb_perfect/article/details/54135506)
 5. [布隆过滤器](https://zhuanlan.zhihu.com/p/43263751) [redis bitmap使用](https://www.cnblogs.com/54chensongxia/p/13794391.html)
 6. [redis的架构模式](https://www.cnblogs.com/jasontec/p/9699242.html) 单机 主从 [sentinel](https://www.jianshu.com/p/06ab9daf921d)  [proxy](https://juejin.im/post/5c132b076fb9a04a08218eef) [cluster](https://blog.51cto.com/alex4dream/2802508)
-7. [Redis集群方案](https://www.cnblogs.com/crazymakercircle/p/14282108.html) Redis cluster [哈希槽](https://blog.csdn.net/z15732621582/article/details/79121213) [一致性hash](https://www.cnblogs.com/lpfuture/p/5796398.html)
+7. [Redis集群方案](https://www.cnblogs.com/crazymakercircle/p/14282108.html) Redis cluster [哈希槽](https://blog.csdn.net/z15732621582/article/details/79121213) [一致性hash](https://www.cnblogs.com/lpfuture/p/5796398.html) 取模
 8. redis [分布式锁redis 命令](https://blog.csdn.net/lihao21/article/details/49104695)  [分布式锁 java 实现](https://my.oschina.net/dengfuwei/blog/1600681)  (结合cms改版看)
 9. [深入浅出Redis-redis底层数据结构（上）](https://www.cnblogs.com/jaycekon/p/6227442.html) [深入浅出Redis-redis底层数据结构（下）](https://www.cnblogs.com/jaycekon/p/6277653.html)
+9. [redis 五大数据类型实现](https://www.cnblogs.com/ysocean/p/9102811.html#_label5)
 10. [底层数据结构](https://blog.csdn.net/qq_36642340/article/details/81020477)
 10. [object idletime 命令不准问题](https://segmentfault.com/a/1190000023642663)
 10. [redis脑裂](https://www.xhyonline.com/?p=1171) [详细](https://blog.f-fox.com/2020/12/11/redis%E9%9B%86%E7%BE%A4%E8%84%91%E8%A3%82%E5%88%86%E6%9E%90/)
+10. [redis一致性问题](https://blog.csdn.net/m0_45406092/article/details/117175920)
+10. [分布式锁Redlock处理redis一致性问题](https://blog.csdn.net/hh1sdfsf56456/article/details/79474434)
 10. [zskiplist实现](https://blog.csdn.net/riemann_/article/details/116901500) [插入](https://segmentfault.com/a/1190000022320734)
 
 # java架构相关
@@ -677,6 +756,15 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 2. [Bean的创建过程](https://www.jianshu.com/p/1dec08d290c1)
 3. [proxy和装饰器的区别](https://www.jianshu.com/p/c06a686dae39)
 
+
+
+## spring boot starter
+
+1. [Spring starter使用](https://www.jianshu.com/p/30ce49fc2f25) [原理](https://blog.csdn.net/ruoshui77/article/details/112258495)
+2. 常用注解[@Order](https://www.cnblogs.com/satire/p/15094089.html) [@Primary](https://blog.csdn.net/u013400939/article/details/52953804)
+
+
+
 # netty参数
 
 1. [ChannelOption参数详解](https://www.jianshu.com/p/975b30171352)
@@ -755,9 +843,15 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 7. kafka延迟（深入理解Kafka核心设计与实践）
 
-8. [kafka面试点](https://www.bilibili.com/read/cv11525238)
+8. [kafka面试点](https://www.bilibili.com/read/cv11525238) [大厂经常问](https://zhuanlan.zhihu.com/p/389939447)
 
-8. acks
+9. acks
+
+10. consumer group P2P 模式和广播模式
+
+11. rebalance
+
+    ![image-20220710210941957](/Users/momo/Library/Application Support/typora-user-images/image-20220710210941957.png)
 
 # RocketMq
 
@@ -805,9 +899,23 @@ live-log和recommend-moniter使用过
 
 2. [CAP](https://www.cnblogs.com/duanxz/p/5229352.html)
 
-3.  分布式锁实现的方式：
+3. 分布式锁实现的方式 redis zk
 
-4. 
+4. [负载均衡算法及其代码实现](https://mp.weixin.qq.com/s/JvpLtfcx5Fv0sY3w2fH83A?)
+
+   **轮询（Round Robin）法**
+
+   **随机（Random）法**
+
+   **源地址哈希（Hash）法**
+
+   **加权轮询（Weight Round Robin）法**
+
+   **加权随机（Weight Random）法**
+
+   **最小连接数（Least Connections）法**
+
+4. [Paxos、Raft、ZAB、Gossip分布式一致性算法](https://zhuanlan.zhihu.com/p/130332285)
 
 
 # 系统设计:
@@ -821,6 +929,8 @@ bitmap HyperLogLog
 
 4.[短网址域名系统](https://hufangyun.com/2017/short-url/) [系统架构](https://blog.51cto.com/u_10180290/3226500)
 5.[分布式唯一序列号生成服务](https://blog.csdn.net/Abysscarry/article/details/80445581)
+
+[时间回拨问题处理](https://blog.csdn.net/qq_26222859/article/details/123689230)
 
 6.zset做事件处理器 连屏pk和星光pk，setnx加锁
 
@@ -836,6 +946,8 @@ bitmap HyperLogLog
 13[.im go的长连接gc问题](https://cloud.tencent.com/developer/article/1069321)
 
 14.[巧用 Bitmap 实现亿级数据统计](https://segmentfault.com/a/1190000040177140)
+
+15. [Feed服务](https://mp.weixin.qq.com/s?__biz=MzI4MTY5NTk4Ng==&mid=2247489693&idx=1&sn=b3138663029f41744203acf174725feb&chksm=eba41b00dcd39216beb85491de7877b91ffd2e4b85562e7ae38d90a64cb78b0142b1ff477fd1&scene=27#wechat_redirect)
 
 # 公司面试
 
@@ -967,7 +1079,17 @@ Kafka怎么保证数据可靠性？讲了生产者端发送消息到broker持久
 
 一面：
 【上海抖音】
-1.Jvm堆和栈的区别2.Jvm年轻代垃圾回收算法3.Mysql聚簇索引和非聚簇索引的区别4.Redis key过期的实现5.Mq如何保证消费有且只有一次6.网站打不开了怎么排查问题
+1.Jvm堆和栈的区别
+
+2.Jvm年轻代垃圾回收算法
+
+3.Mysql聚簇索引和非聚簇索引的区别
+
+4.Redis key过期的实现
+
+5.Mq如何保证消费有且只有一次
+
+6.网站打不开了怎么排查问题
 算法题是链表操作
 【上海教育中台】
 
