@@ -362,7 +362,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 5. [RTT](https://blog.csdn.net/qq_38890412/article/details/106663674) [MSL](https://blog.51cto.com/wushank/1135060)
 
-6. epoll 边缘触发 和水平触发区别 ss
+6. epoll 边缘触发 和水平触发区别 ss [epoll原理]([十个问题理解Linux epoll工作原理-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1831360))
 
 7. [tcp为什么用三次握手](https://blog.csdn.net/lengxiao1993/article/details/82771768) [书里的解释](http://www.justdojava.com/2021/03/28/tcp/)
 
@@ -503,7 +503,7 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 17. [同步调用，异步回调和 Future 模式](https://blog.csdn.net/qq_35688140/article/details/83115723)
 
-18. [CountDownLatch、CyclicBarrier和Semaphore](https://www.cnblogs.com/dolphin0520/p/3920397.html)
+18. [、CyclicBarrier和Semaphore](https://www.cnblogs.com/dolphin0520/p/3920397.html)
 
 19. [grpc中的同步和异步](https://blog.csdn.net/huweijian5/article/details/83822470#grpc_2)
 
@@ -713,7 +713,11 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 7、索引的优化 
 
-1.[mysql线程池](https://dbaplus.cn/news-11-1989-1.html) [问题](https://app.yinxiang.com/fx/01cd837d-e01c-40e1-a551-51ab0471e19f)
+8.[mysql线程池](https://dbaplus.cn/news-11-1989-1.html) [问题](https://app.yinxiang.com/fx/01cd837d-e01c-40e1-a551-51ab0471e19f)
+
+9.mysql 乐观锁 version，status状态机流转等
+
+10.[for update和 乐观锁的区别](https://zhuanlan.zhihu.com/p/143866444)
 
 ​                                                  
 
