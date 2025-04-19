@@ -319,18 +319,24 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ## 操作系统
 
 1. [进程和线程的区别](https://blog.csdn.net/kuangsonghan/article/details/80674777)
+   
+   进程：进程是操作系统资源分配的基本单位
+   
+   线程：线程是CPU调度的最小单位，任务调度和执行的基本单位
 
-2. [进程、线程及协程的区别](https://blog.csdn.net/weixin_49199646/article/details/109210547)
+1. [进程、线程及协程的区别](https://blog.csdn.net/weixin_49199646/article/details/109210547)（ **线程进程都是同步机制，而协程则是异步**）
 
-3. [页缓存](https://blog.csdn.net/Joy0709/article/details/41879001) [DMA](https://blog.csdn.net/zhejfl/article/details/82555634) [虚拟内存](https://www.jianshu.com/p/13e337312651)
+2. [页缓存](https://blog.csdn.net/Joy0709/article/details/41879001) https://blog.csdn.net/zhejfl/article/details/82555634 [虚拟内存](https://www.jianshu.com/p/13e337312651)
 
-4. [零拷贝](https://mp.weixin.qq.com/s/WqXU7zfRPeMznOESRphbxg)
+3. [零拷贝](https://juejin.cn/post/6995519558475841550)
 
-5. [Linux 网络 I/O 模型简介](https://my.oschina.net/lvzunwei/blog/687861) 五种 阻塞I/O模型、非阻塞I/O模型、I/O复用模型（多路复用）、信号驱动I/O模型、异步I/O
+![](/Users/momo/Library/Application%20Support/marktext/images/2025-04-05-22-24-46-image.png)
+
+1. [Linux 网络 I/O 模型简介](https://my.oschina.net/lvzunwei/blog/687861) 五种 阻塞I/O模型、非阻塞I/O模型、I/O复用模型（多路复用）、信号驱动I/O模型、异步I/O
    
    其实对应java就三种  阻塞I/O模型、I/O复用模型（多路复用）、异步I/O
 
-6. [select poll epoll](https://zhuanlan.zhihu.com/p/39970630)  
+2. [select poll epoll](https://zhuanlan.zhihu.com/p/39970630)  
    
    select 三个缺点：
    
@@ -340,7 +346,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
    
    触发方式是水平触发，应用程序如果没有完成对一个已经就绪的文件描述符进行IO，那么之后再次select调用还是会将这些文件描述符通知进程；
 
-7. [文件描述符/文件句柄/文件指针的区别与联系](https://www.jianshu.com/p/ad879061edb2)
+3. [文件描述符/文件句柄/文件指针的区别与联系](https://www.jianshu.com/p/ad879061edb2)
 
 ​     **文件描述符是进程级别的，文件句柄是系统级别的**，不能混用。它们在不同级别表示已打开的文件。
 
@@ -414,21 +420,27 @@ https://www.delftstack.com/zh/howto/java/empty-character-literal-java/
 
 ## 基本类型相关
 
-1. [ String#intern](https://tech.meituan.com/2014/03/06/in-depth-understanding-string-intern.html)
+1. [ String#intern ](https://tech.meituan.com/2014/03/06/in-depth-understanding-string-intern.html) [题目 ]([Java intern() 方法 | 菜鸟教程](https://www.runoob.com/java/java-string-intern.html)) ([java中String.intern的坑_string intern 坑-CSDN博客](https://blog.csdn.net/liuyang755855737/article/details/82145410))
 
-2. [从JVM角度比较equals和==的区别](https://blog.csdn.net/seu_calvin/article/details/52089040)
+2. [jdk8 intern](https://blog.csdn.net/seu_calvin/article/details/52291082)
 
-3. [String、StringBuider以及StringBuffer的区别和使用场景](https://blog.csdn.net/seu_calvin/article/details/52094905)
+3. [从JVM角度比较equals和==的区别](https://blog.csdn.net/seu_calvin/article/details/52089040)
 
-4. [Double](https://www.yiibai.com/java_data_type/java_double_data_type.html)
+4. [String、StringBuider以及StringBuffer的区别和使用场景](https://blog.csdn.net/seu_calvin/article/details/52094905)
+
+5. [Double](https://www.yiibai.com/java_data_type/java_double_data_type.html)
 
 ## 基本集合相关
 
-1. [ArrayList与LinkedList的区别](https://www.cnblogs.com/zhukf/p/13713533.html)  [LinkedList原理](https://www.cnblogs.com/baojun/p/11087015.html)  [ArrayList扩容机制](https://zhuanlan.zhihu.com/p/409503569)
+1. [ArrayList与LinkedList的区别](https://www.cnblogs.com/zhukf/p/13713533.html)  [LinkedList原理](https://www.cnblogs.com/baojun/p/11087015.html)  [ArrayList扩容机制](https://zhuanlan.zhihu.com/p/409503569)  LinkedList底层是双向链表
 
 2. [HashMap java8 数据结构实现、查找、添加、扩容](https://zhuanlan.zhihu.com/p/21673805) 为什么扩容后的HashMap容量是之前容量的两倍？快
    
    只需要看看原来的hash值新增的那个bit是1还是0就好了，是0的话索引没变，是1的话索引变成“原索引+oldCap”
+   
+   ![](/Users/momo/Library/Application%20Support/marktext/images/2025-04-06-22-10-12-image.png)
+   
+   可以看的出来为什么h& (n-1)  n-1后会把最后一位bit减去，每次length*2就是进一个bit 
 
 3. HashMap几个关键字段threshold，loadFactor，length，size，modCount 其中threshold =length * loadFactor，size超过threshold时就会resize；[多线程下HashMap死循环问题](https://blog.csdn.net/xuefeng0707/article/details/40797085)
 
